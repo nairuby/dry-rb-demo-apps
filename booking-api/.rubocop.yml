@@ -1,0 +1,52 @@
+require: rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.6.0
+  NewCops: enable
+  Exclude:
+    - node_modules/**/*
+    - vendor/**/*
+    - bin/**
+    - config/environments/**
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/Encoding:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: false
+
+Style/HashTransformValues:
+  Enabled: false
+
+Style/StringLiterals:
+  Exclude:
+    - db/**
+
+Style/NumericLiterals:
+  Exclude:
+    - db/schema.rb
+
+Style/IfUnlessModifier:
+  Exclude:
+    - spec/rails_helper.rb
+
+Layout/LineLength:
+  Max: 90
+  Exclude:
+    - config/initializers/**
+    - db/**
+    - db/migrate/**
+    - spec/spec_helper.rb
+
+Layout/EmptyLinesAroundBlockBody:
+  Exclude:
+    - db/schema.rb
