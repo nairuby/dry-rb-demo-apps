@@ -49,5 +49,11 @@ module BookingApi
         )
       end
     end
+
+    # For Rails Admin
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Flash
+    config.middleware.use Rack::MethodOverride
+    config.middleware.use ActionDispatch::Session::CookieStore, { key: '_booking_api_session' }
   end
 end
