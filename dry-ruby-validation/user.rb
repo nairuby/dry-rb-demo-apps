@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'contracts/user_contract'
 require 'dry/monads'
 
@@ -29,7 +31,6 @@ new_user = {
     title: 'Software Engineer'
   }
 }
-
 
 u = User.new
 validated_user = u.call(new_user)
